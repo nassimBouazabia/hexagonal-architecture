@@ -8,4 +8,5 @@ public interface VehicleApi {
 
     List<Vehicle> getVehiclesToRepair();
 
+    List<Vehicle> repairVehicles();
 }

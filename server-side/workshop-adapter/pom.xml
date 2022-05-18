@@ -6,21 +6,21 @@
         <artifactId>demo</artifactId>
         <groupId>com.norauto</groupId>
         <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>application</artifactId>
+    <artifactId>workshop-adapter</artifactId>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>18</maven.compiler.source>
+        <maven.compiler.target>18</maven.compiler.target>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <scope>provided</scope>
+            <groupId>com.norauto</groupId>
+            <artifactId>application</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -28,4 +28,5 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
+
 </project>

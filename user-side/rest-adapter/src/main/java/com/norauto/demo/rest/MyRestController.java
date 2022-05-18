@@ -1,10 +1,13 @@
 package com.norauto.demo.rest;
 
 import com.norauto.demo.api.VehicleApi;
+import com.norauto.demo.model.Vehicle;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 @RequestMapping
@@ -13,8 +16,9 @@ public class MyRestController {
 
     VehicleApi vehicleApi;
 
-    @GetMapping("/hello")
-    public String hello() {
-        return vehicleApi.getVehiclesToRepair().get(0).toString();
+    @GetMapping("/repair")
+    public List<Vehicle> hello() {
+        return vehicleApi.repairVehicles();
     }
+
 }

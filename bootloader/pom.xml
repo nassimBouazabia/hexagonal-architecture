@@ -25,6 +25,10 @@
             <groupId>com.norauto</groupId>
             <artifactId>rest-adapter</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.norauto</groupId>
+            <artifactId>workshop-adapter</artifactId>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
