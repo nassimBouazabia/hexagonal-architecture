@@ -1,13 +1,13 @@
-package com.norauto.demo.model;
+package com.norauto.demo.entities;
 
-public enum VehicleStatus {
+public enum VehicleStatusEntity {
 
     BROKEN_DOWN("broken-down"),
     OK("ok");
 
     private String vehicleStatus;
 
-    VehicleStatus(String vehicleStatus) {
+    VehicleStatusEntity(String vehicleStatus) {
         this.vehicleStatus = vehicleStatus;
     }
 }

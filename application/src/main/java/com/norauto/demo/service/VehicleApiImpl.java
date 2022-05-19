@@ -8,26 +8,33 @@ import com.norauto.demo.spi.WorkshopSpi;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
-import java.beans.JavaBean;
 import java.util.List;
+import java.util.UUID;
 
 @Component
 @AllArgsConstructor
-public class VehicleImpl implements VehicleApi {
+public class VehicleApiImpl implements VehicleApi {
 
     WorkshopSpi workshopSpi;
+    VehicleSpi vehicleSpi;
+
+
+    @Override
+    public Vehicle createVehicle(Vehicle vehicle) {
+        return vehicleSpi.createVehicle(vehicle);
+    }
 
     @Override
     public List<Vehicle> getVehiclesToRepair() {
-        List<Vehicle> vehicles = List.of(new Vehicle("12345", VehicleStatus.BROKEN_DOWN));
+        List<Vehicle> vehicles = List.of(new Vehicle(UUID.randomUUID(),"12345", VehicleStatus.BROKEN_DOWN));
         workshopSpi.repairVehicles(vehicles);
         return vehicles;
     }
 
     @Override
     public List<Vehicle> repairVehicles() {
-        Vehicle vehicle1 = new Vehicle("12345", VehicleStatus.BROKEN_DOWN);
-        Vehicle vehicle2 = new Vehicle("54321", VehicleStatus.IN_GOOD_CONDITION);
+        Vehicle vehicle1 = new Vehicle(UUID.randomUUID(),"12345", VehicleStatus.BROKEN_DOWN);
+        Vehicle vehicle2 = new Vehicle(UUID.randomUUID(),"54321", VehicleStatus.OK);
 
         List<Vehicle> vehicles = List.of(vehicle1,vehicle2);
         workshopSpi.repairVehicles(vehicles);

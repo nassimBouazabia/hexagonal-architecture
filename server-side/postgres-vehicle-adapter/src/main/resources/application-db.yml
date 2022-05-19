@@ -1,0 +1,10 @@
+## default connection pool
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/vehicle
+    username: postgres
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.PostgreSQLDialect

@@ -3,10 +3,13 @@ package com.norauto.demo.model;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+import java.util.UUID;
+
 @AllArgsConstructor
 @Getter
 public class Vehicle {
 
+    private UUID id;
     private String licencePlate;
     private VehicleStatus vehicleStatus;
 
@@ -15,7 +18,7 @@ public class Vehicle {
     }
 
     public Vehicle fixVehicle(){
-        this.vehicleStatus = VehicleStatus.IN_GOOD_CONDITION;
+        this.vehicleStatus = VehicleStatus.OK;
         return this;
     }
 }
