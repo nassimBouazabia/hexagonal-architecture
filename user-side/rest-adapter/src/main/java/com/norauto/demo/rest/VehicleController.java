@@ -10,21 +10,22 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping
+@RequestMapping("/vehicles")
 @AllArgsConstructor
 public class VehicleController {
 
     VehicleApi vehicleApi;
 
-    @PostMapping("/vehicles")
+    @PostMapping
     public ResponseEntity<Vehicle> createVehicle(@RequestBody Vehicle vehicleCreationRequest){
         Vehicle vehicle = vehicleApi.createVehicle(vehicleCreationRequest);
         return ResponseEntity.of(Optional.of(vehicle));
     }
 
-    @GetMapping("/repair")
-    public List<Vehicle> hello() {
-        return vehicleApi.repairVehicles();
+    @GetMapping
+    public ResponseEntity<List<Vehicle>> getVehicles(){
+        List<Vehicle> vehicles = vehicleApi.getVehicles();
+        return ResponseEntity.of(Optional.of(vehicles));
     }
 
 }

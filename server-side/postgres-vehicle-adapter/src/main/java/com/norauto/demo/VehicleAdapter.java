@@ -25,6 +25,11 @@ public class VehicleAdapter implements VehicleSpi {
     }
 
     @Override
+    public List<Vehicle> getAllVehicles() {
+        return vehicleMapper.toVehicles(vehicleRepository.findAll());
+    }
+
+    @Override
     public List<Vehicle> getBrokenDownVehicles() {
         return null;
     }

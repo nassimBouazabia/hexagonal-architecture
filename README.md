@@ -4,7 +4,7 @@ You can follow the step below and have an experience that help you to understand
 
 ## 1. Project structure  
 ```
- ____ bootloader: project starter 
+____ bootloader: project starter 
 |
 |____ application: modules that containes business APIs, SPIs (Service provider interfaces) and implementations
 |

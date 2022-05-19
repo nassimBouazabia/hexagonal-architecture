@@ -25,6 +25,11 @@ public class VehicleApiImpl implements VehicleApi {
     }
 
     @Override
+    public List<Vehicle> getVehicles() {
+        return vehicleSpi.getAllVehicles();
+    }
+
+    @Override
     public List<Vehicle> getVehiclesToRepair() {
         List<Vehicle> vehicles = List.of(new Vehicle(UUID.randomUUID(),"12345", VehicleStatus.BROKEN_DOWN));
         workshopSpi.repairVehicles(vehicles);

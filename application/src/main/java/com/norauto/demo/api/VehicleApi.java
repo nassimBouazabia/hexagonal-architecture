@@ -11,4 +11,6 @@ public interface VehicleApi {
     List<Vehicle> repairVehicles();
 
     Vehicle createVehicle(Vehicle vehicle);
+
+    List<Vehicle> getVehicles();
 }

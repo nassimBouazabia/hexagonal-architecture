@@ -11,4 +11,6 @@ public interface VehicleSpi {
     void updateRepairedVehicles();
 
     Vehicle createVehicle(Vehicle vehicle);
+
+    List<Vehicle> getAllVehicles();
 }
