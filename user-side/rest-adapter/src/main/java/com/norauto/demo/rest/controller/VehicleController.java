@@ -1,4 +1,4 @@
-package com.norauto.demo.rest;
+package com.norauto.demo.rest.controller;
 
 import com.norauto.demo.api.VehicleApi;
 import com.norauto.demo.model.Vehicle;

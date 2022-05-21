@@ -1,8 +1,8 @@
-package com.norauto.demo;
+package com.norauto.demo.vehicle;
 
-import com.norauto.demo.dao.VehicleRepository;
-import com.norauto.demo.entities.VehicleEntity;
-import com.norauto.demo.mapper.VehicleMapper;
+import com.norauto.demo.vehicle.dao.VehicleRepository;
+import com.norauto.demo.vehicle.entities.VehicleEntity;
+import com.norauto.demo.vehicle.mapper.VehicleMapper;
 import com.norauto.demo.model.Vehicle;
 import com.norauto.demo.spi.VehicleSpi;
 import lombok.AllArgsConstructor;

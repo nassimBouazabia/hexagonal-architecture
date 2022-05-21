@@ -1,6 +1,6 @@
-package com.norauto.demo.mapper;
+package com.norauto.demo.vehicle.mapper;
 
-import com.norauto.demo.entities.VehicleEntity;
+import com.norauto.demo.vehicle.entities.VehicleEntity;
 import com.norauto.demo.model.Vehicle;
 import org.mapstruct.Mapper;
 

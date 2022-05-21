@@ -1,4 +1,4 @@
-package com.norauto.demo;
+package com.norauto.demo.workshop;
 
 import com.norauto.demo.model.Vehicle;
 import com.norauto.demo.spi.WorkshopSpi;

@@ -1,4 +1,4 @@
-package com.norauto.demo.entities;
+package com.norauto.demo.vehicle.entities;
 
 import lombok.Data;
 
