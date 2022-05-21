@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/vehicles")
@@ -27,5 +28,13 @@ public class VehicleController {
         List<Vehicle> vehicles = vehicleApi.getVehicles();
         return ResponseEntity.of(Optional.of(vehicles));
     }
+
+    @PostMapping("/{vehicleId}/fix")
+    public ResponseEntity<Vehicle> fixVehicle(@PathVariable UUID vehicleId){
+        Vehicle vehicle = vehicleApi.fixVehicle(vehicleId);
+        return ResponseEntity.of(Optional.of(vehicle));
+    }
+
+
 
 }

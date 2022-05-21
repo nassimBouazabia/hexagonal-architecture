@@ -14,5 +14,5 @@ public interface VehicleMapper {
     VehicleEntity toVehicleEntity(Vehicle vehicle);
     Vehicle toVehicle(VehicleEntity vehicleEntity);
     List<Vehicle> toVehicles(List<VehicleEntity> vehicleEntities);
-    
+
 }

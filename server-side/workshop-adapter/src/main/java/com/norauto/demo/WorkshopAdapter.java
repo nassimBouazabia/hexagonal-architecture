@@ -10,10 +10,15 @@ import java.util.List;
 public class WorkshopAdapter implements WorkshopSpi {
 
     @Override
-    public void repairVehicles(List<Vehicle> vehicles) {
+    public void fixVehicles(List<Vehicle> vehicles) {
         vehicles.stream()
                 .filter(vehicle -> vehicle.isBrokenDown())
                 .map(vehicle -> vehicle.fixVehicle())
                 .toList();
+    }
+
+    @Override
+    public void fixVehicle(Vehicle vehicles) {
+        vehicles.fixVehicle();
     }
 }

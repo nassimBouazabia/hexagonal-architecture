@@ -3,14 +3,13 @@ package com.norauto.demo.api;
 import com.norauto.demo.model.Vehicle;
 
 import java.util.List;
+import java.util.UUID;
 
 public interface VehicleApi {
 
-    List<Vehicle> getVehiclesToRepair();
-
-    List<Vehicle> repairVehicles();
-
     Vehicle createVehicle(Vehicle vehicle);
-
     List<Vehicle> getVehicles();
+    Vehicle fixVehicle(UUID vehicleId);
+
+    List<Vehicle> getVehiclesToFix();
 }

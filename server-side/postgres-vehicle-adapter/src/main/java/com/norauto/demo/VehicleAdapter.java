@@ -9,6 +9,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.UUID;
 
 @Component
 @AllArgsConstructor
@@ -26,16 +27,21 @@ public class VehicleAdapter implements VehicleSpi {
 
     @Override
     public List<Vehicle> getAllVehicles() {
-        return vehicleMapper.toVehicles(vehicleRepository.findAll());
+        List<VehicleEntity> vehicleEntities = vehicleRepository.findAll();
+        return vehicleMapper.toVehicles(vehicleEntities);
     }
 
     @Override
-    public List<Vehicle> getBrokenDownVehicles() {
-        return null;
+    public Vehicle getVehicle(UUID vehicleId) {
+        VehicleEntity vehicleEntity = vehicleRepository.getById(vehicleId);
+        return vehicleMapper.toVehicle(vehicleEntity);
     }
 
     @Override
-    public void updateRepairedVehicles() {
-
+    public Vehicle updateVehicle(Vehicle vehicle) {
+        VehicleEntity vehicleEntity = vehicleMapper.toVehicleEntity(vehicle);
+        vehicleEntity = vehicleRepository.save(vehicleEntity);
+        return vehicleMapper.toVehicle(vehicleEntity);
     }
+
 }
