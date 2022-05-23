@@ -15,5 +15,8 @@ public class VehicleEntity {
     private String licencePlate;
 
     private VehicleStatusEntity vehicleStatus;
+
+    private String countryCode;
+
 }
 

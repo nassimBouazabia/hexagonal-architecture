@@ -6,5 +6,6 @@ import java.util.List;
 
 public interface WorkshopSpi {
 
-    void fixVehicle(Vehicle vehicles);
+    Vehicle fixVehicle(Vehicle vehicles);
+    boolean worksInCountry(String country);
 }

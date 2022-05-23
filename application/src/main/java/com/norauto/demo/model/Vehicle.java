@@ -12,6 +12,7 @@ public class Vehicle {
     private UUID id;
     private String licencePlate;
     private VehicleStatus vehicleStatus;
+    private String countryCode;
 
     public boolean isBrokenDown(){
         return this.vehicleStatus == VehicleStatus.BROKEN_DOWN;

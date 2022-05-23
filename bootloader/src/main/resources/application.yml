@@ -2,3 +2,7 @@ spring:
   profiles:
     group:
       "dev": "db"
+
+logging:
+  level:
+    root: INFO

@@ -9,6 +9,7 @@
 		<module>user-side/rest-adapter</module>
 		<module>server-side/postgres-vehicle-adapter</module>
 		<module>server-side/workshop-adapter</module>
+		<module>server-side/atu-workshop-adapter</module>
 	</modules>
     <parent>
 		<groupId>org.springframework.boot</groupId>
@@ -45,6 +46,11 @@
 			<dependency>
 				<groupId>com.norauto</groupId>
 				<artifactId>postgres-adapter</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.norauto</groupId>
+				<artifactId>atu-workshop-adapter</artifactId>
 				<version>0.0.1-SNAPSHOT</version>
 			</dependency>
 			<dependency>
