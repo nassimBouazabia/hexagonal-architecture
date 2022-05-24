@@ -11,5 +11,4 @@ public interface VehicleApi {
     List<Vehicle> getVehicles();
     Vehicle fixVehicle(UUID vehicleId);
 
-    List<Vehicle> getVehiclesToFix();
 }

@@ -6,6 +6,5 @@ import java.util.List;
 
 public interface WorkshopSpi {
 
-    void fixVehicles(List<Vehicle> vehicles);
     void fixVehicle(Vehicle vehicles);
 }
