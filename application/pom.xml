@@ -27,5 +27,13 @@
             <artifactId>spring-context</artifactId>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>com.norauto</groupId>
+            <artifactId>postgres-adapter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.norauto</groupId>
+            <artifactId>workshop-adapter</artifactId>
+        </dependency>
     </dependencies>
 </project>
