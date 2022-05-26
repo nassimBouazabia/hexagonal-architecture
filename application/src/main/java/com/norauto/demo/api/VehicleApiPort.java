@@ -5,7 +5,7 @@ import com.norauto.demo.model.Vehicle;
 import java.util.List;
 import java.util.UUID;
 
-public interface VehicleApi {
+public interface VehicleApiPort {
 
     Vehicle createVehicle(Vehicle vehicle);
     List<Vehicle> getVehicles();

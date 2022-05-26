@@ -1,6 +1,6 @@
 package com.norauto.demo.service;
 
-import com.norauto.demo.api.VehicleApi;
+import com.norauto.demo.api.VehicleApiPort;
 import com.norauto.demo.model.Vehicle;
 import com.norauto.demo.vehicle.VehicleDAO;
 import lombok.AllArgsConstructor;
@@ -11,10 +11,8 @@ import java.util.UUID;
 
 @Component
 @AllArgsConstructor
-public class VehicleApiImpl implements VehicleApi {
+public class VehicleApiImpl implements VehicleApiPort {
 
-//    WorkshopAdapter workshopSpi;
-//    VehicleAdapter vehicleSpi;
     VehicleDAO vehicleDAO;
 
     @Override

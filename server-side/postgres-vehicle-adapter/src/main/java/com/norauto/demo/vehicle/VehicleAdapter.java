@@ -12,7 +12,7 @@
 //
 //@Component
 //@AllArgsConstructor
-//public class VehicleAdapter implements VehicleSPI{
+//public class VehicleAdapter implements VehicleSpiPort{
 //
 //    VehicleRepository vehicleRepository;
 //    VehicleMapper vehicleMapper;

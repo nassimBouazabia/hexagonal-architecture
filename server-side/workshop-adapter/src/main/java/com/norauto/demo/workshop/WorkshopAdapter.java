@@ -4,7 +4,7 @@
 //import org.springframework.stereotype.Component;
 //
 //@Component
-//public class WorkshopAdapter {
+//public class WorkshopAdapter implements WorkshopSpiPort {
 //
 //    public void fixVehicle(Vehicle vehicles) {
 //        vehicles.fixVehicle();

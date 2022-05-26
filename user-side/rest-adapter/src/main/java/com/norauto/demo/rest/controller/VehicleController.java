@@ -1,6 +1,6 @@
 package com.norauto.demo.rest.controller;
 
-import com.norauto.demo.api.VehicleApi;
+import com.norauto.demo.api.VehicleApiPort;
 import com.norauto.demo.model.Vehicle;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +15,7 @@ import java.util.UUID;
 @AllArgsConstructor
 public class VehicleController {
 
-    VehicleApi vehicleApi;
+    VehicleApiPort vehicleApi;
 
     @PostMapping
     public ResponseEntity<Vehicle> createVehicle(@RequestBody Vehicle vehicleCreationRequest){
