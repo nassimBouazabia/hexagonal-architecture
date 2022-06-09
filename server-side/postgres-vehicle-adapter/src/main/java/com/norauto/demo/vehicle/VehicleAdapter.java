@@ -4,7 +4,7 @@ import com.norauto.demo.vehicle.dao.VehicleRepository;
 import com.norauto.demo.vehicle.entities.VehicleEntity;
 import com.norauto.demo.vehicle.mapper.VehicleMapper;
 import com.norauto.demo.model.Vehicle;
-import com.norauto.demo.spi.VehicleSpi;
+import com.norauto.demo.spi.VehiclePort;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -13,7 +13,7 @@ import java.util.UUID;
 
 @Component
 @AllArgsConstructor
-public class VehicleAdapter implements VehicleSpi {
+public class VehicleAdapter implements VehiclePort {
 
     VehicleRepository vehicleRepository;
     VehicleMapper vehicleMapper;

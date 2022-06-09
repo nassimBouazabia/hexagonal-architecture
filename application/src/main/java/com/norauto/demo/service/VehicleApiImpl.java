@@ -3,9 +3,8 @@ package com.norauto.demo.service;
 import com.norauto.demo.api.VehicleApi;
 import com.norauto.demo.exception.NotSupportedCountryException;
 import com.norauto.demo.model.Vehicle;
-import com.norauto.demo.model.VehicleStatus;
-import com.norauto.demo.spi.VehicleSpi;
-import com.norauto.demo.spi.WorkshopSpi;
+import com.norauto.demo.spi.VehiclePort;
+import com.norauto.demo.spi.WorkshopPort;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -17,32 +16,32 @@ import java.util.UUID;
 @AllArgsConstructor
 public class VehicleApiImpl implements VehicleApi {
 
-    List<WorkshopSpi> workshopSpis;
-    VehicleSpi vehicleSpi;
+    List<WorkshopPort> workshopPorts;
+    VehiclePort vehiclePort;
 
 
     @Override
     public Vehicle createVehicle(Vehicle vehicle) {
-        return vehicleSpi.createVehicle(vehicle);
+        return vehiclePort.createVehicle(vehicle);
     }
 
     @Override
     public List<Vehicle> getVehicles() {
-        return vehicleSpi.getAllVehicles();
+        return vehiclePort.getAllVehicles();
     }
 
     @Override
     public Vehicle fixVehicle(UUID vehicleId) {
-        Vehicle vehicle = vehicleSpi.getVehicle(vehicleId);
-        WorkshopSpi workshopSpi = getWorkshopSpi(vehicle);
-        workshopSpi.fixVehicle(vehicle);
-        vehicleSpi.updateVehicle(vehicle);
+        Vehicle vehicle = vehiclePort.getVehicle(vehicleId);
+        WorkshopPort workshopPort = getWorkshopSpi(vehicle);
+        workshopPort.fixVehicle(vehicle);
+        vehiclePort.updateVehicle(vehicle);
         return vehicle;
     }
 
-    private WorkshopSpi getWorkshopSpi(Vehicle vehicle) {
-        Optional<WorkshopSpi> workshopSpiOptional = workshopSpis.stream()
-                .filter(workshopSpi1 -> workshopSpi1.worksInCountry(vehicle.getCountryCode()))
+    private WorkshopPort getWorkshopSpi(Vehicle vehicle) {
+        Optional<WorkshopPort> workshopSpiOptional = workshopPorts.stream()
+                .filter(workshopPort1 -> workshopPort1.worksInCountry(vehicle.getCountryCode()))
                 .findFirst();
 
         if (workshopSpiOptional.isEmpty())

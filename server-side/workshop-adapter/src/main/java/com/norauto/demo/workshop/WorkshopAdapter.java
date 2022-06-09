@@ -1,14 +1,14 @@
 package com.norauto.demo.workshop;
 
 import com.norauto.demo.model.Vehicle;
-import com.norauto.demo.spi.WorkshopSpi;
+import com.norauto.demo.spi.WorkshopPort;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 import java.util.List;
 
 @Component
-public class WorkshopAdapter implements WorkshopSpi {
+public class WorkshopAdapter implements WorkshopPort {
 
     List<String> supportedCountries = Arrays.asList("FR", "ES", "PT", "IT", "BE");
 

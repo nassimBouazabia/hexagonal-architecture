@@ -4,7 +4,7 @@ import com.norauto.demo.model.Vehicle;
 
 import java.util.List;
 
-public interface WorkshopSpi {
+public interface WorkshopPort {
 
     Vehicle fixVehicle(Vehicle vehicles);
     boolean worksInCountry(String country);
