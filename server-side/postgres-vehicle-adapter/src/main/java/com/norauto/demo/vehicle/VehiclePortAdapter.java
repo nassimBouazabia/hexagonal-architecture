@@ -1,10 +1,10 @@
 //package com.norauto.demo.vehicle;
 //
 //import com.norauto.demo.model.Vehicle;
+//import com.norauto.demo.spi.VehiclePort;
 //import com.norauto.demo.vehicle.dao.VehicleRepository;
 //import com.norauto.demo.vehicle.entities.VehicleEntity;
 //import com.norauto.demo.vehicle.mapper.VehicleMapper;
-//import com.norauto.demo.spi.VehicleSpiPort;
 //import lombok.AllArgsConstructor;
 //import org.springframework.stereotype.Component;
 //
@@ -13,7 +13,7 @@
 //
 //@Component
 //@AllArgsConstructor
-//public class VehiclePortAdapter implements VehicleSpiPort{
+//public class VehiclePortAdapter implements VehiclePort {
 //
 //    VehicleRepository vehicleRepository;
 //    VehicleMapper vehicleMapper;
