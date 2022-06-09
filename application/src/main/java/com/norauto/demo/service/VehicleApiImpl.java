@@ -3,6 +3,7 @@ package com.norauto.demo.service;
 import com.norauto.demo.api.VehicleApiPort;
 import com.norauto.demo.model.Vehicle;
 import com.norauto.demo.vehicle.VehicleDAO;
+import com.norauto.demo.vehicle.entities.VehicleEntity;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -17,7 +18,9 @@ public class VehicleApiImpl implements VehicleApiPort {
 
     @Override
     public Vehicle createVehicle(Vehicle vehicle) {
-        return new Vehicle(vehicleDAO.createVehicle(vehicle.toVehicleEntity()));
+        VehicleEntity vehicleEntity = vehicle.toVehicleEntity();
+        vehicleEntity = vehicleDAO.createVehicle(vehicleEntity);
+        return new Vehicle(vehicleEntity);
     }
 
     @Override
